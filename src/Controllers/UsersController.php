@@ -38,8 +38,8 @@ class UsersController {
     public function update(){
         $user = User::find($_GET['id']);
         if($user){
-            $user->email = $_POST['title'];
-            $user->password = $_POST['body'];
+            $user->email = $_POST['email'];
+            $user->password = $_POST['password'];
             $user->save();
             header('Location: /admin/users');
         } else {
